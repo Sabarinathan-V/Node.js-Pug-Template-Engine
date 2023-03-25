@@ -1,0 +1,17 @@
+extends main.pug 
+
+block title
+    title #{docTitle}
+
+block content
+    div(class='main')
+        h1 Welcome to the Express Js
+        h2 #{text}
+        h3 #{courseTitle}
+
+        if courses.length > 0
+            ul
+                each course in courses
+                    li #{course}
+        else
+            p No Courses Available
